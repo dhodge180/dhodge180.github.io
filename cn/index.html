@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Navigator</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<body>
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <p class="title">Chess Navigator</p>
+    <p class="subtitle">Free, open-source software for demonstrating chess problems</p>
+    <p class="block">Built since I couldn't find quite the right tool, and decided to write it instead. There are some lovely tools out there for slightly other purposes! I am just a hobby programmer, so apologies to all the professionals for all the weird things I've done.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Windows</span>
+      <span class="tag">macOS</span>
+      <span class="tag">Hobby project</span>
+      <span class="tag">Free</span>
+    </div>
+  </div>
+</section>
+
+<div class="my-6 has-text-centered">
+  <p class="has-text-weight-semibold is-uppercase mb-3">Jump to a section</p>
+  <div class="buttons is-centered">
+    <a href="#demo" class="button is-primary is-rounded">&#8595; Demo</a>
+    <a href="#input-methods" class="button is-primary is-rounded">&#8595; Input Methods</a>
+    <a href="#shortcuts" class="button is-primary is-rounded">&#8595; Shortcuts</a>
+    <a href="#features" class="button is-primary is-rounded">&#8595; Features</a>
+    <a href="#public" class="button is-primary is-rounded">&#8595; Public</a>
+  </div>
+</div>
+
+<section class="section" id="demo">
+  <div class="container">
+    <h2 class="title is-3">A very short demo</h2>
+    <p class="block">A short screencast covering stepping through a pre-defined solution: pressing <span class="tag is-info is-medium has-text-weight-bold">&#10145;</span> (Right arrow), using <span class="tag is-info is-medium has-text-weight-bold">Ctrl</span> + <span class="tag is-info is-medium has-text-weight-bold">1/2/3</span> to add colours, and <span class="tag is-info is-medium has-text-weight-bold">Delete</span> to clear colours.</p>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <video controls preload="metadata" style="width:100%;">
+          <source src="assets/screencast.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="input-methods">
+  <div class="container">
+    <h2 class="title is-3">Input Methods: Two ways of demo-ing a problem</h2>
+    <p class="block">Chess Navigator doesn't enforce chess rules -- beyond castling, en passant and promotion. It's a presentation tool, not an engine.</p>
+    <div class="columns">
+      <div class="column">
+        <div class="box">
+          <h3 class="title is-5">Mouse-based demonstration</h3>
+          <p>Pick up and place any piece, anywhere. Good for showing an idea that isn't part of the prepared line. You can still press <span class="tag is-info has-text-weight-bold">U</span> (Undo) and <span class="tag is-info has-text-weight-bold">I</span> (Redo) to Undo and Redo moves. Use <span class="tag is-info has-text-weight-bold">Q</span>/<span class="tag is-info has-text-weight-bold">R</span>/<span class="tag is-info has-text-weight-bold">B</span>/<span class="tag is-info has-text-weight-bold">S</span>/<span class="tag is-info has-text-weight-bold">P</span> to complete promotions.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <h3 class="title is-5">Solution tree navigation</h3>
+          <p>Use the arrow keys to move through a pre-defined tree of FEN positions -- a solution, a try, or several tries before the true key. Play a move to improvise, then resume tree navigation right where you left off.</p>
+          <p>The pre-defined sequence is defined in a text file like <code>PROBLEM_LIST.txt</code> which was loaded when the program was run.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shortcuts">
+  <div class="container">
+    <h2 class="title is-3">Various keyboard shortcuts</h2>
+    <p class="block">Press <span class="tag is-info is-medium has-text-weight-bold">H</span> the moment the program launches to see the full list. Here are some of the most important:</p>
+    <table class="table is-bordered is-striped is-fullwidth">
+      <thead>
+        <tr><th>Key</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="tag is-info is-medium has-text-weight-bold">&#11013;</span> / <span class="tag is-info is-medium has-text-weight-bold">&#10145;</span></td><td>Step through the solution tree</td></tr>
+        <tr><td><span class="tag is-info is-medium has-text-weight-bold">+</span> / <span class="tag is-info is-medium has-text-weight-bold">&minus;</span></td><td>Cycle board and piece size</td></tr>
+        <tr><td><span class="tag is-info is-medium has-text-weight-bold">Home</span></td><td>Jump to the start of the problem</td></tr>
+        <tr><td><span class="tag is-info is-medium has-text-weight-bold">End</span></td><td>Jump to the end of the solution</td></tr>
+        <tr><td><span class="tag is-info is-medium has-text-weight-bold">F1</span> or <span class="tag is-info is-medium has-text-weight-bold">PageDown</span></td><td>Load the next problem (if multiple problems in a file)</td></tr>
+        <tr><td><span class="tag is-info is-medium has-text-weight-bold">F3</span> or <span class="tag is-info is-medium has-text-weight-bold">PageUp</span></td><td>Load the previous problem (if multiple problems in a file)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <h2 class="title is-3">Feature notes</h2>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <div class="box has-background-primary-soft has-text-primary-bold">
+          <h3 class="title is-5 has-text-primary-bold">Windows / Linux / macOS</h3>
+          <div class="content">
+            <ul>
+              <li>Written in Python, tested on Linux and Windows, and reported to work on macOS too.</li>
+              <li>A Windows installer is available in the releases -- Windows will warn you it's from an unrecognised publisher; that's expected for a small hobby project.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box has-background-info-soft has-text-info-bold">
+          <h3 class="title is-5 has-text-info-bold">Solution trees &amp; custom syntax</h3>
+          <div class="content">
+            <ul>
+              <li>Pre-stored problems are defined with a custom syntax in <code>PROBLEM_LIST.txt</code> -- see <code>Sample_PROBLEM_LIST.txt</code> for the format.</li>
+              <li>The syntax can express unusual rules by chaining moves together -- an anti-circe example is included in the sample file.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box has-background-success-soft has-text-success-bold">
+          <h3 class="title is-5 has-text-success-bold">Fairy pieces</h3>
+          <div class="content">
+            <ul>
+              <li>Fairy pieces used in a diagram appear automatically in the side panel.</li>
+              <li>Defined in <code>custom_pieces.yml</code> -- add your own pieces, families, and even custom images.</li>
+              <li>Naming follows the Popeye piece conventions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box has-background-warning-soft has-text-warning-bold">
+          <h3 class="title is-5 has-text-warning-bold">Look &amp; feel</h3>
+          <div class="content">
+            <ul>
+              <li>Colours, font sizes, and animations are all customisable via <code>config.json</code>.</li>
+              <li>Six board and piece sizes, cycled with <span class="tag is-info is-medium has-text-weight-bold">+</span> / <span class="tag is-info is-medium has-text-weight-bold">&minus;</span>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="public">
+  <div class="container">
+    <h2 class="title is-3">Everything's public</h2>
+    <p class="block">Source, README, cheatsheet and the Windows installer all live on GitHub.</p>
+    <div class="buttons">
+      <a class="button is-link" href="https://github.com/dhodge180/ChessNavigator" target="_blank" rel="noopener">Main repository -- screenshots &amp; README</a>
+      <a class="button is-link is-light" href="https://github.com/dhodge180/ChessNavigator/releases" target="_blank" rel="noopener">Releases -- Windows installer</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>David Hodge</p>
+  </div>
+</footer>
+
+</body>
+</html>
