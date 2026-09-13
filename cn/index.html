@@ -38,7 +38,7 @@
 <section class="section" id="demo">
   <div class="container">
     <h2 class="title is-3">A very short demo</h2>
-    <p class="block">A short screencast covering stepping through a pre-defined solution: pressing <span class="tag is-info is-medium has-text-weight-bold">&#10145;</span> (Right arrow), using <span class="tag is-info is-medium has-text-weight-bold">Ctrl</span> + <span class="tag is-info is-medium has-text-weight-bold">1/2/3</span> to add colours, and <span class="tag is-info is-medium has-text-weight-bold">Delete</span> to clear colours.</p>
+    <p class="block">A short screencast covering stepping through a pre-defined solution: pressing <span class="tag is-info is-medium has-text-weight-bold">&#10145;</span> (Right arrow), using <span class="tag is-info is-medium has-text-weight-bold">1/2/3/4</span> to toggle square colours, and <span class="tag is-info is-medium has-text-weight-bold">Delete</span> to clear all colours.</p>
     <div class="columns is-centered">
       <div class="column is-8">
         <video controls preload="metadata" style="width:100%;">
@@ -56,16 +56,29 @@
     <p class="block">Chess Navigator doesn't enforce chess rules -- beyond castling, en passant and promotion. It's a presentation tool, not an engine.</p>
     <div class="columns">
       <div class="column">
-        <div class="box">
+        <div class="box has-background-warning-soft has-text-warning-soft-invert">
           <h3 class="title is-5">Mouse-based demonstration</h3>
           <p>Pick up and place any piece, anywhere. Good for showing an idea that isn't part of the prepared line. You can still press <span class="tag is-info has-text-weight-bold">U</span> (Undo) and <span class="tag is-info has-text-weight-bold">I</span> (Redo) to Undo and Redo moves. Use <span class="tag is-info has-text-weight-bold">Q</span>/<span class="tag is-info has-text-weight-bold">R</span>/<span class="tag is-info has-text-weight-bold">B</span>/<span class="tag is-info has-text-weight-bold">S</span>/<span class="tag is-info has-text-weight-bold">P</span> to complete promotions.</p>
         </div>
       </div>
       <div class="column">
-        <div class="box">
+        <div class="box has-background-danger-soft has-text-danger-soft-invert">
           <h3 class="title is-5">Solution tree navigation</h3>
           <p>Use the arrow keys to move through a pre-defined tree of FEN positions -- a solution, a try, or several tries before the true key. Play a move to improvise, then resume tree navigation right where you left off.</p>
           <p>The pre-defined sequence is defined in a text file like <code>PROBLEM_LIST.txt</code> which was loaded when the program was run.</p>
+          <details><div class="box has-background-info-soft has-text-primary-info-invert">Each entry in the file can contain four elements: a title, a FEN, a stipulation (subtext) and moves. Typically just provide the board's pieces no need for the full FEN notation. Here is an example (included with the program):
+         <code><br>
+Title: K. Wenda & D. Werner, Die Schwalbe 2022⏎<br>
+FEN: r5S1/pP2p1P1/1BR1k3/1BR1S3/8/4pP2/1PP5/K3s2Q⏎<br>
+Subtext: S#9 AntiCirce Calvet⏎<br>
+Moves: h1h5 e6d6 a1b1 d6d7 b1c1 d7d8 c1d1 d8e8 b7b8r a8b8 & b8h8 d1e1 h8h5 & h5a8 c6c7 e8d8 c7e7 & e7a1 a7b6 & b6b7 e1c1 a8a1
+         </code>
+         <ul>
+         <li>Note the four elements are on their own lines.</li>
+         <li>Note the FEN just describes the board.</li>
+         <li>Note the moves are entered in UCI notation, and additional syntax allows for special moves. For full details of the move syntax please consult the <a href="https://github.com/dhodge180/ChessNavigator#syntax-of-tree-file">README file</a> online.</li>
+         </ul></div>
+         <summary>More details on syntax...</summary></details>
         </div>
       </div>
     </div>
